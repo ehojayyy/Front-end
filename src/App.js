@@ -6,12 +6,10 @@ import UserTable from './tables/UserTable'
 const App = () => {
 	// Data
 	const usersData = [
-		{ id: 1, name: 'Tania', username: 'floppy@gmail.com' },
-		{ id: 2, name: 'Craig', username: 'sili@gmail.com' },
-		{ id: 3, name: 'Ben', username: 'benisphere@gmail.com' },
+
 	]
 
-	const initialFormState = { id: null, nome: '', username: '' }
+	const initialFormState = { id: null, nome: '', username: '', usersenha: '' }
 
 	// Setting state
 	const [users, setUsers] = useState(usersData)
@@ -39,7 +37,7 @@ const App = () => {
 	const editRow = user => {
 		setEditing(true)
 
-		setCurrentUser({ id: user.id, name: user.name, username: user.username })
+		setCurrentUser({ id: user.id, name: user.name, username: user.username, senha: user.senha })
 	}
 
 	return (
